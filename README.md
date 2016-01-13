@@ -9,6 +9,7 @@ This is sonarqube 5.1.2 version image. You can easily connect to external databa
  3) All 3 files docker-entrypoint.sh, Dockerfile and ojdbc7.jar (which is oracle thin driver for connecting to oracle db) should be present in current folder from where we want to build the sonarqube image.
  
    Build the sonarqube image using command docker build -t <image-name> .
+   
  4) Run the image in container using below command
   docker run -d --name <container-name> -p 9000:9000 -e SONARQUBE_JDBC_USERNAME=sonar -e SONARQUBE_JDBC_PASSWORD=sonar -e SONARQUBE_JDBC_URL=jdbc:oracle:thin:@//IPAddress:Port#/orcl <image-name>
 
